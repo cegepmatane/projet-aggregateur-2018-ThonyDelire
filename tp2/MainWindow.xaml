@@ -4,9 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:tp2"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        mc:Ignorable="d" Height="528.6" Width="936.8" Title="AggregationRSS" Background="#FFC7D6FF">
     <Grid>
-        
+        <Rectangle Fill="#FF282828" HorizontalAlignment="Left" Height="499" Stroke="Black" VerticalAlignment="Top" Width="67"/>
+        <Button Content="Accueil" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="67" Height="36"/>
+        <Button Content="Météo" HorizontalAlignment="Left" Margin="0,75,0,0" VerticalAlignment="Top" Width="67" Height="36"/>
+        <Button Content="Rss" HorizontalAlignment="Left" Margin="0,111,0,0" VerticalAlignment="Top" Width="67" Height="36"/>
+        <Button Content="Slack" HorizontalAlignment="Left" Margin="0,147,0,0" VerticalAlignment="Top" Width="67" Height="36"/>
+        <Button Content="CrytoMo" HorizontalAlignment="Left" Margin="0,183,0,0" VerticalAlignment="Top" Width="67" Height="36"/>
+        <Button Content="Pokemon" HorizontalAlignment="Left" Margin="0,219,0,0" VerticalAlignment="Top" Width="67" Height="36"/>
+
     </Grid>
 </Window>

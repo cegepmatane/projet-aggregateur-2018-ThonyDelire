@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace tp2
 {
     /// <summary>
@@ -20,9 +21,30 @@ namespace tp2
     /// </summary>
     public partial class MainWindow : Window
     {
+        RedditDAO redditDao = new RedditDAO();
+        PokemonDAO pokemonDAO = new PokemonDAO();
+        //CryptoMonnaieDAO cryptomonnaieDAO = new CryptoMonnaieDAO();
+        //cryptomonnaieDAO.listerMonnaies();
+
         public MainWindow()
         {
             InitializeComponent();
+
+            /*string redditRss = "https://www.reddit.com/r/dankmemes/.rss";
+            List<RedditRss> listeRedditRss = redditDAO.listerNouvelles(redditRss);
+	        foreach (RedditRss redditRss in listeRedditRss)
+		    {
+		       Console.WriteLine(nouvelle.titre);
+	    	}*/
+
+            List<Pokemon> listePokemon = pokemonDAO.listerPokemon();
+            foreach (Pokemon pokemon in listePokemon)
+            {
+                Console.WriteLine("Pokemon : " + pokemon.nom);
+            }
         }
+
+
+        
     }
 }
