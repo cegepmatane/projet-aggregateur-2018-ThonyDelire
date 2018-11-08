@@ -22,21 +22,33 @@ namespace tp2
     public partial class MainWindow : Window
     {
         RedditDAO redditDao = new RedditDAO();
+        NouvelleDAO nouvelleDAO = new NouvelleDAO();
         PokemonDAO pokemonDAO = new PokemonDAO();
-        //CryptoMonnaieDAO cryptomonnaieDAO = new CryptoMonnaieDAO();
-        //cryptomonnaieDAO.listerMonnaies();
+        SalonDAO salonDAO = new SalonDAO();
+        CryptoMonnaieDAO cryptomonnaieDAO = new CryptoMonnaieDAO();
+        Controleur controleur = new Controleur();
+
+        
+        
 
         public MainWindow()
         {
             InitializeComponent();
 
-            /*string redditRss = "https://www.reddit.com/r/dankmemes/.rss";
-            List<RedditRss> listeRedditRss = redditDAO.listerNouvelles(redditRss);
-	        foreach (RedditRss redditRss in listeRedditRss)
-		    {
-		       Console.WriteLine(nouvelle.titre);
-	    	}*/
+        }
 
+        public void AfficherMeteo()
+        {
+            string rssMeteoQuebec = "http://meteo.gc.ca/rss/city/qc-133_f.xml";
+            List<Nouvelle> listeNouvelles = nouvelleDAO.listerNouvelles(rssMeteoQuebec);
+            foreach (Nouvelle nouvelle in listeNouvelles)
+            {
+                Console.WriteLine(nouvelle.titre);
+            }
+}
+
+        public void AfficherPokemon()
+        {
             List<Pokemon> listePokemon = pokemonDAO.listerPokemon();
             foreach (Pokemon pokemon in listePokemon)
             {
@@ -44,7 +56,52 @@ namespace tp2
             }
         }
 
+        public void AfficherReddit()
+        {
+            string redditRss = "https://www.reddit.com/r/dankmemes/.rss";
+            List<RedditRss> listeRedditRss = redditDao.listerRedditRss(redditRss);
+            foreach (RedditRss reddit in listeRedditRss)
+            {
+                Console.WriteLine(reddit.title);
+            }
+        }
 
-        
+        public void SalonSlack()
+        {
+            string listeSalons = salonDAO.listerSalons();
+            Console.WriteLine(listeSalons);
+        }
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)//Button Accueil
+        {
+            
+        }
+
+        private void slack_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Meteo_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Rss_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void cryptomo_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void pokemon_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
+
 }

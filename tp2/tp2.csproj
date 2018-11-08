@@ -59,12 +59,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controleur.cs" />
     <Compile Include="CryptoMonnaie.cs" />
     <Compile Include="CryptoMonnaieDAO.cs" />
+    <Compile Include="CrytoMonaie.xaml.cs">
+      <DependentUpon>CrytoMonaie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="meteo.xaml.cs">
+      <DependentUpon>meteo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Nouvelle.cs" />
+    <Compile Include="NouvelleDAO.cs" />
     <Compile Include="Pokemon.cs" />
+    <Compile Include="PokemonPage.xaml.cs">
+      <DependentUpon>PokemonPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PokemonDAO.cs" />
     <Compile Include="RedditDAO.cs" />
     <Compile Include="RedditRss.cs" />
+    <Compile Include="RedditRssPage.xaml.cs">
+      <DependentUpon>RedditRssPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SalonDAO.cs" />
+    <Compile Include="Slack.xaml.cs">
+      <DependentUpon>Slack.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CrytoMonaie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -77,6 +100,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="meteo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PokemonPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RedditRssPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Slack.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
