@@ -35,6 +35,14 @@ namespace tp2
         {
             InitializeComponent();
 
+            string redditRss = "https://www.reddit.com/r/dankmemes/.rss";
+            List<RedditRss> listeRedditRss = redditDao.listerRedditRss(redditRss);
+            foreach (RedditRss reddit in listeRedditRss)
+            {
+                Console.WriteLine(reddit.title);
+            }
+
+
         }
 
         public void AfficherMeteo()
@@ -54,6 +62,12 @@ namespace tp2
             {
                 Console.WriteLine("Pokemon : " + pokemon.nom);
             }
+        }
+
+        public void AfficherCryptomonaie()
+        {
+            string listeMonnaies = cryptomonnaieDAO.listerMonnaies();
+            Console.WriteLine(listeMonnaies);
         }
 
         public void AfficherReddit()
@@ -80,7 +94,10 @@ namespace tp2
 
         private void slack_Click(object sender, RoutedEventArgs e)
         {
-            
+            /*SlackPage slackPage = new SlackPage();
+            slackPage.Show();
+            this.Close();*/
+
         }
 
         private void Meteo_Click(object sender, RoutedEventArgs e)
@@ -95,7 +112,7 @@ namespace tp2
 
         private void cryptomo_Click(object sender, RoutedEventArgs e)
         {
-            
+            AfficherCryptomonaie();
         }
 
         private void pokemon_Click(object sender, RoutedEventArgs e)

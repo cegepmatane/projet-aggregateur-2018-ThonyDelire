@@ -15,34 +15,28 @@ namespace tp2
             Console.WriteLine("RssDAO.listerRedditRss(" + rss + ")");
             HttpWebRequest requeteRedditRss = (HttpWebRequest)WebRequest.Create(rss);
             requeteRedditRss.Method = "GET";
-            //requeteNouvelles.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
             requeteRedditRss.UserAgent = "Mozilla Firefox";
-            //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            
             WebResponse reponse = requeteRedditRss.GetResponse();
             StreamReader lecteur = new StreamReader(reponse.GetResponseStream());
             string xml = lecteur.ReadToEnd();
             XElement RedditXML = XElement.Parse(xml);
             foreach (XElement RedditRssXML in RedditXML.Elements())
             {
-                //Console.WriteLine(nouvelleXML.ToString());
-                //XDocument nouvelleDoc = nouvelleXML.CreateReader();
+               
                 XmlReader lecteurReddit = RedditRssXML.CreateReader();
                 lecteurReddit.MoveToContent();
                 lecteurReddit.ReadToDescendant("title");
                 string titre = lecteurReddit.ReadInnerXml();
                 Console.WriteLine(titre);
 
-                //lecteurNouvelle.ReadToFollowing("link");
-                //string lien = lecteurNouvelle.MoveToAttribute("href").ToString();
-                //Console.WriteLine(lien);
+                
 
                 lecteurReddit.ReadToFollowing("content");
                 string publication = lecteurReddit.ReadInnerXml();
                 Console.WriteLine(publication);
 
-                //lecteurNouvelle.ReadToFollowing("category");
-                //string categorie = lecteurNouvelle.MoveToAttribute("term").ToString();
-                //Console.WriteLine(categorie);
+
 
                 lecteurReddit.ReadToFollowing("name");
                 string nom = lecteurReddit.ReadInnerXml();

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace tp2
 {
     /// <summary>
-    /// Logique d'interaction pour CrytoMonaie.xaml
+    /// Logique d'interaction pour Meteo.xaml
     /// </summary>
-    public partial class CrytoMonaie : Window
+    public partial class Meteo : Window
     {
-        public CrytoMonaie()
+        public Meteo()
         {
             InitializeComponent();
         }

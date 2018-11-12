@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace tp2
 {
     /// <summary>
-    /// Logique d'interaction pour Slack.xaml
+    /// Logique d'interaction pour SlackPage.xaml
     /// </summary>
-    public partial class Slack : Window
+    public partial class SlackPage : Window
     {
-        public Slack()
+        public SlackPage()
         {
             InitializeComponent();
         }

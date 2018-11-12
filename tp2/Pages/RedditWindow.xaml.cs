@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace tp2
 {
     /// <summary>
-    /// Logique d'interaction pour meteo.xaml
+    /// Logique d'interaction pour RedditRss.xaml
     /// </summary>
-    public partial class meteo : Window
+    public partial class RedditRss : Window
     {
-        public meteo()
+        public RedditRss()
         {
             InitializeComponent();
         }

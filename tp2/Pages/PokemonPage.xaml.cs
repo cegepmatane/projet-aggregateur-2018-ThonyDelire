@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace tp2
 {
     /// <summary>
-    /// Logique d'interaction pour pokemon.xaml
+    /// Logique d'interaction pour PokemonPage.xaml
     /// </summary>
-    public partial class pokemon : Window
+    public partial class PokemonPage : Window
     {
-        public pokemon()
+        public PokemonPage()
         {
             InitializeComponent();
         }
