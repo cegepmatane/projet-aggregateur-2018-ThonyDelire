@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace tp2
 {
     /// <summary>
-    /// Logique d'interaction pour CryptoMonaiePage.xaml
+    /// Logique d'interaction pour CryptoMonnaieWindow.xaml
     /// </summary>
-    public partial class CryptoMonaiePage : Window
+    public partial class CryptoMonnaieWindow : Window
     {
-        public CryptoMonaiePage()
+        public CryptoMonnaieWindow()
         {
             InitializeComponent();
         }

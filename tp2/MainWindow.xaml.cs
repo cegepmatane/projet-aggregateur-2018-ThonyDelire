@@ -35,12 +35,6 @@ namespace tp2
         {
             InitializeComponent();
 
-            string redditRss = "https://www.reddit.com/r/dankmemes/.rss";
-            List<RedditRss> listeRedditRss = redditDao.listerRedditRss(redditRss);
-            foreach (RedditRss reddit in listeRedditRss)
-            {
-                Console.WriteLine(reddit.title);
-            }
 
 
         }
@@ -94,9 +88,9 @@ namespace tp2
 
         private void slack_Click(object sender, RoutedEventArgs e)
         {
-            /*SlackPage slackPage = new SlackPage();
+            SlackWindow slackPage = new SlackWindow();
             slackPage.Show();
-            this.Close();*/
+            this.Close();
 
         }
 

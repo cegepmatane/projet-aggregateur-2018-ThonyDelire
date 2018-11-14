@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace tp2
 {
     /// <summary>
-    /// Logique d'interaction pour RedditRss.xaml
+    /// Logique d'interaction pour RedditWindow.xaml
     /// </summary>
-    public partial class RedditRss : Window
+    public partial class RedditWindow : Window
     {
-        public RedditRss()
+        public RedditWindow()
         {
             InitializeComponent();
         }

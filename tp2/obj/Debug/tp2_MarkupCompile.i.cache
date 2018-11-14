@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\1734548\source\repos\TP2Prog\tp2\App.xaml
-6135214833
+6583535422
 
-241420478160
+24937044845
 14511505135
-Pages\CryptoMonaiePage.xaml;MainWindow.xaml;Pages\MeteoPage.xaml;Pages\RedditWindow.xaml;Pages\SlackPage.xaml;Pages\PokemonPage.xaml;
+Pages\CryptoMonnaieWindow.xaml;MainWindow.xaml;Pages\meteoWindow.xaml;Pages\SlackWindow.xaml;Pages\PokemonWindow.xaml;Pages\RedditWindow.xaml;
 
 True
 

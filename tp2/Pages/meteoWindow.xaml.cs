@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace tp2
 {
     /// <summary>
-    /// Logique d'interaction pour SlackPage.xaml
+    /// Logique d'interaction pour meteoWindow.xaml
     /// </summary>
-    public partial class SlackPage : Window
+    public partial class meteoWindow : Window
     {
-        public SlackPage()
+        public meteoWindow()
         {
             InitializeComponent();
         }

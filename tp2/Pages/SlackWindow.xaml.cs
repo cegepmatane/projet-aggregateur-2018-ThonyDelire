@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace tp2
 {
     /// <summary>
-    /// Logique d'interaction pour PokemonPage.xaml
+    /// Logique d'interaction pour SlackWindow.xaml
     /// </summary>
-    public partial class PokemonPage : Window
+    public partial class SlackWindow : Window
     {
-        public PokemonPage()
+        public SlackWindow()
         {
             InitializeComponent();
         }

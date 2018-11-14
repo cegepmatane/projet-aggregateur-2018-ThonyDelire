@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace tp2
 {
     /// <summary>
-    /// Logique d'interaction pour Meteo.xaml
+    /// Logique d'interaction pour PokemonWindow.xaml
     /// </summary>
-    public partial class Meteo : Window
+    public partial class PokemonWindow : Window
     {
-        public Meteo()
+        public PokemonWindow()
         {
             InitializeComponent();
         }

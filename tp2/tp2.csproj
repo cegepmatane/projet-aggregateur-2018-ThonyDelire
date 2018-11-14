@@ -60,20 +60,20 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Controleur.cs" />
-    <Compile Include="Pages\CryptoMonaiePage.xaml.cs">
-      <DependentUpon>CryptoMonaiePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="CryptoMonnaie.cs" />
     <Compile Include="CryptoMonnaieDAO.cs" />
-    <Compile Include="Pages\MeteoPage.xaml.cs">
-      <DependentUpon>MeteoPage.xaml</DependentUpon>
+    <Compile Include="Pages\CryptoMonnaieWindow.xaml.cs">
+      <DependentUpon>CryptoMonnaieWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\meteoWindow.xaml.cs">
+      <DependentUpon>meteoWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Nouvelle.cs" />
     <Compile Include="NouvelleDAO.cs" />
     <Compile Include="Pokemon.cs" />
     <Compile Include="PokemonDAO.cs" />
-    <Compile Include="Pages\PokemonPage.xaml.cs">
-      <DependentUpon>PokemonPage.xaml</DependentUpon>
+    <Compile Include="Pages\PokemonWindow.xaml.cs">
+      <DependentUpon>PokemonWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="RedditDAO.cs" />
     <Compile Include="RedditRss.cs" />
@@ -81,10 +81,10 @@
       <DependentUpon>RedditWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="SalonDAO.cs" />
-    <Compile Include="Pages\SlackPage.xaml.cs">
-      <DependentUpon>SlackPage.xaml</DependentUpon>
+    <Compile Include="Pages\SlackWindow.xaml.cs">
+      <DependentUpon>SlackWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="Pages\CryptoMonaiePage.xaml">
+    <Page Include="Pages\CryptoMonnaieWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -100,19 +100,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\MeteoPage.xaml">
+    <Page Include="Pages\meteoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SlackWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PokemonWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\RedditWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\SlackPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\PokemonPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -146,5 +146,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
