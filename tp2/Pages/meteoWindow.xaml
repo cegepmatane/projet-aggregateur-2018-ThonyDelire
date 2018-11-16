@@ -12,7 +12,7 @@
             <ColumnDefinition Width="267*"/>
         </Grid.ColumnDefinitions>
         <Rectangle Fill="#FF282828" HorizontalAlignment="Left" Height="499" Stroke="Black" VerticalAlignment="Top" Width="67"/>
-        <Button x:Name="Accueil" Content="Accueil" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="67" Height="36" Click="Button_Click"/>
+        <Button x:Name="Accueil" Content="Accueil" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="67" Height="36" Click="Accueil_Click"/>
         <Button x:Name="Meteo" Content="Météo" HorizontalAlignment="Left" Margin="0,75,0,0" VerticalAlignment="Top" Width="67" Height="36" Click="Meteo_Click"/>
         <Button x:Name="Rss" Content="Rss" HorizontalAlignment="Left" Margin="0,111,0,0" VerticalAlignment="Top" Width="67" Height="36" Click="Rss_Click"/>
         <Button x:Name="slack" Content="Slack" HorizontalAlignment="Left" Margin="0,147,0,0" VerticalAlignment="Top" Width="67" Height="36" Click="slack_Click"/>

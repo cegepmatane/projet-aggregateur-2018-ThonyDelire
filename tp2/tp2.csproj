@@ -65,8 +65,8 @@
     <Compile Include="Pages\CryptoMonnaieWindow.xaml.cs">
       <DependentUpon>CryptoMonnaieWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\meteoWindow.xaml.cs">
-      <DependentUpon>meteoWindow.xaml</DependentUpon>
+    <Compile Include="Pages\MeteoWindow.xaml.cs">
+      <DependentUpon>MeteoWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Nouvelle.cs" />
     <Compile Include="NouvelleDAO.cs" />
@@ -100,7 +100,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\meteoWindow.xaml">
+    <Page Include="Pages\MeteoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

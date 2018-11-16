@@ -17,7 +17,13 @@
         <Button x:Name="slack" Content="Slack" HorizontalAlignment="Left" Margin="0,147,0,0" VerticalAlignment="Top" Width="67" Height="36" Click="slack_Click"/>
         <Button x:Name="cryptomo" Content="CrytoMo" HorizontalAlignment="Left" Margin="0,183,0,0" VerticalAlignment="Top" Width="67" Height="36" Click="cryptomo_Click"/>
         <Button x:Name="pokemon" Content="Pokemon" HorizontalAlignment="Left" Margin="0,219,0,0" VerticalAlignment="Top" Width="67" Height="36" Click="pokemon_Click"/>
-        <Canvas x:Name="visuel" HorizontalAlignment="Left" Height="478" Margin="89,7,0,0" VerticalAlignment="Top" Width="787" Grid.ColumnSpan="2" Background="#FF3974AB"/>
+        <Canvas x:Name="visuel" HorizontalAlignment="Left" Height="478" Margin="89,7,0,0" VerticalAlignment="Top" Width="787" Grid.ColumnSpan="2" Background="#FF3974AB">
+            <Button x:Name="meteoAccueil" Content="Météo" Canvas.Left="26" Canvas.Top="10" Width="152" Height="149"/>
+            <Button x:Name="redditAccueil" Content="Reddit" Canvas.Left="215" Canvas.Top="10" Width="152" Height="149"/>
+            <Button x:Name="slackAccueil" Content="Slack" Canvas.Left="405" Canvas.Top="10" Width="152" Height="149"/>
+            <Button x:Name="cryptoMonnaieAccueil" Content="CryptoMonnaie" Canvas.Left="599" Canvas.Top="10" Width="152" Height="149"/>
+            <Button x:Name="pokemonAccueil" Content="Pokemon" Canvas.Left="315" Canvas.Top="240" Width="152" Height="149"/>
+        </Canvas>
 
     </Grid>
 </Window>

@@ -33,9 +33,10 @@ namespace tp2
 
         public MainWindow()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
 
-
+           
 
         }
 
@@ -88,6 +89,7 @@ namespace tp2
 
         private void slack_Click(object sender, RoutedEventArgs e)
         {
+            
             SlackWindow slackPage = new SlackWindow();
             slackPage.Show();
             this.Close();
@@ -97,21 +99,34 @@ namespace tp2
         private void Meteo_Click(object sender, RoutedEventArgs e)
         {
             
+            meteoWindow meteoPage = new meteoWindow();
+            meteoPage.Show();
+            this.Close();
         }
 
         private void Rss_Click(object sender, RoutedEventArgs e)
         {
             
+            RedditWindow RedditPage = new RedditWindow();
+            RedditPage.Show();
+            this.Close();
         }
 
         private void cryptomo_Click(object sender, RoutedEventArgs e)
         {
-            AfficherCryptomonaie();
+            
+            CryptoMonnaieWindow CryptoPage = new CryptoMonnaieWindow();
+            CryptoPage.Show();
+            this.Close();
+            //AfficherCryptomonaie();
         }
 
         private void pokemon_Click(object sender, RoutedEventArgs e)
         {
             
+            PokemonWindow PokemonPage = new PokemonWindow();
+            PokemonPage.Show();
+            this.Close();
         }
     }
 
