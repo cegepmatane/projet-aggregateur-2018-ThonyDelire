@@ -1,4 +1,4 @@
-﻿<Window x:Class="tp2.meteoWindow"
+﻿<Window x:Class="tp2.MeteoWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -19,5 +19,6 @@
         <Button x:Name="cryptomo" Content="CrytoMo" HorizontalAlignment="Left" Margin="0,183,0,0" VerticalAlignment="Top" Width="67" Height="36" Click="cryptomo_Click"/>
         <Button x:Name="pokemon" Content="Pokemon" HorizontalAlignment="Left" Margin="0,219,0,0" VerticalAlignment="Top" Width="67" Height="36" Click="pokemon_Click"/>
         <Canvas x:Name="visuel" HorizontalAlignment="Left" Height="478" Margin="89,7,0,0" VerticalAlignment="Top" Width="787" Grid.ColumnSpan="2" Background="#FF3974AB"/>
+        <Label Content="Meteo" FontSize="48" Foreground="White" Grid.ColumnSpan="2" Margin="89,10,582.8,415.2"/>
     </Grid>
 </Window>

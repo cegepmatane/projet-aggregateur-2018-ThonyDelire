@@ -21,6 +21,8 @@ namespace tp2
     {
         public CryptoMonnaieWindow()
         {
+            MainWindow mainWindow = new MainWindow();
+
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
@@ -34,8 +36,8 @@ namespace tp2
 
         private void Meteo_Click(object sender, RoutedEventArgs e)
         {
-            
-            meteoWindow meteoPage = new meteoWindow();
+            //MainWindow.AfficherMeteo();
+            MeteoWindow meteoPage = new MeteoWindow();
             meteoPage.Show();
             this.Close();
         }

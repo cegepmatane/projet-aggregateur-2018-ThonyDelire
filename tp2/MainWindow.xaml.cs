@@ -26,7 +26,7 @@ namespace tp2
         PokemonDAO pokemonDAO = new PokemonDAO();
         SalonDAO salonDAO = new SalonDAO();
         CryptoMonnaieDAO cryptomonnaieDAO = new CryptoMonnaieDAO();
-        Controleur controleur = new Controleur();
+        Controleur controleurAccueil =  null;
 
         
         
@@ -36,51 +36,12 @@ namespace tp2
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
 
+            this.controleurAccueil = new Controleur();
+            this.controleurAccueil.setAccueilPage(this);
+
            
 
         }
-
-        public void AfficherMeteo()
-        {
-            string rssMeteoQuebec = "http://meteo.gc.ca/rss/city/qc-133_f.xml";
-            List<Nouvelle> listeNouvelles = nouvelleDAO.listerNouvelles(rssMeteoQuebec);
-            foreach (Nouvelle nouvelle in listeNouvelles)
-            {
-                Console.WriteLine(nouvelle.titre);
-            }
-}
-
-        public void AfficherPokemon()
-        {
-            List<Pokemon> listePokemon = pokemonDAO.listerPokemon();
-            foreach (Pokemon pokemon in listePokemon)
-            {
-                Console.WriteLine("Pokemon : " + pokemon.nom);
-            }
-        }
-
-        public void AfficherCryptomonaie()
-        {
-            string listeMonnaies = cryptomonnaieDAO.listerMonnaies();
-            Console.WriteLine(listeMonnaies);
-        }
-
-        public void AfficherReddit()
-        {
-            string redditRss = "https://www.reddit.com/r/dankmemes/.rss";
-            List<RedditRss> listeRedditRss = redditDao.listerRedditRss(redditRss);
-            foreach (RedditRss reddit in listeRedditRss)
-            {
-                Console.WriteLine(reddit.title);
-            }
-        }
-
-        public void SalonSlack()
-        {
-            string listeSalons = salonDAO.listerSalons();
-            Console.WriteLine(listeSalons);
-        }
-
 
         private void Button_Click(object sender, RoutedEventArgs e)//Button Accueil
         {
@@ -89,44 +50,31 @@ namespace tp2
 
         private void slack_Click(object sender, RoutedEventArgs e)
         {
+            controleurAccueil.notifierSlack();
             
-            SlackWindow slackPage = new SlackWindow();
-            slackPage.Show();
-            this.Close();
 
         }
 
         private void Meteo_Click(object sender, RoutedEventArgs e)
         {
+            controleurAccueil.notifierMeteo();
             
-            meteoWindow meteoPage = new meteoWindow();
-            meteoPage.Show();
-            this.Close();
         }
 
-        private void Rss_Click(object sender, RoutedEventArgs e)
+       private void Rss_Click(object sender, RoutedEventArgs e)
         {
+            controleurAccueil.notifierRss();
             
-            RedditWindow RedditPage = new RedditWindow();
-            RedditPage.Show();
-            this.Close();
         }
 
         private void cryptomo_Click(object sender, RoutedEventArgs e)
         {
-            
-            CryptoMonnaieWindow CryptoPage = new CryptoMonnaieWindow();
-            CryptoPage.Show();
-            this.Close();
-            //AfficherCryptomonaie();
+            controleurAccueil.notifierCryptoM();
         }
 
         private void pokemon_Click(object sender, RoutedEventArgs e)
         {
-            
-            PokemonWindow PokemonPage = new PokemonWindow();
-            PokemonPage.Show();
-            this.Close();
+            controleurAccueil.notifierPokemon();
         }
     }
 

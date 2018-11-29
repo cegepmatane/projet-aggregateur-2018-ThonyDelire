@@ -17,16 +17,25 @@ namespace tp2
     /// <summary>
     /// Logique d'interaction pour meteoWindow.xaml
     /// </summary>
-    public partial class meteoWindow : Window
+    public partial class MeteoWindow : Window
     {
-        public meteoWindow()
+        Controleur controleurAccueil = null;
+      
+
+        public MeteoWindow()
         {
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
+        public void activerControleur(Controleur controleur)
+        {
+            Console.WriteLine("MeteoWindow.activerControleur()");
+            this.controleurAccueil = controleur;
+        }
 
         private void Accueil_Click(object sender, RoutedEventArgs e)
         {
+
             MainWindow mainPage = new MainWindow();
             mainPage.Show();
             this.Close();
@@ -34,38 +43,34 @@ namespace tp2
 
         private void Meteo_Click(object sender, RoutedEventArgs e)
         {
-            meteoWindow meteoPage = new meteoWindow();
-            meteoPage.Show();
-            this.Close();
+            Console.WriteLine("MeteoWindow.Meteo_Click()");
+            controleurAccueil.notifierMeteo();
         }
 
         private void Rss_Click(object sender, RoutedEventArgs e)
         {
-            RedditWindow RedditPage = new RedditWindow();
-            RedditPage.Show();
-            this.Close();
+            controleurAccueil.notifierRss();
+            
         }
 
         private void slack_Click(object sender, RoutedEventArgs e)
         {
-            SlackWindow slackPage = new SlackWindow();
-            slackPage.Show();
-            this.Close();
+            controleurAccueil.notifierSlack();
+           
         }
 
         private void cryptomo_Click(object sender, RoutedEventArgs e)
         {
-            CryptoMonnaieWindow CryptoPage = new CryptoMonnaieWindow();
-            CryptoPage.Show();
-            this.Close();
-            //AfficherCryptomonaie();
+            controleurAccueil.notifierCryptoM();
+            
         }
 
         private void pokemon_Click(object sender, RoutedEventArgs e)
         {
-            PokemonWindow PokemonPage = new PokemonWindow();
-            PokemonPage.Show();
-            this.Close();
+            controleurAccueil.notifierPokemon();
+            
         }
+
+        
     }
 }

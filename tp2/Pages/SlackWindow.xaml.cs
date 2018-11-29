@@ -36,7 +36,7 @@ namespace tp2
 
         private void Meteo_Click(object sender, RoutedEventArgs e)
         {
-            meteoWindow meteoPage = new meteoWindow();
+            MeteoWindow meteoPage = new MeteoWindow();
             meteoPage.Show();
             this.Close();
         }
