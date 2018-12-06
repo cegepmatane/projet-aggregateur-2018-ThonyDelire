@@ -20,6 +20,19 @@
         <Button x:Name="pokemon" Content="Pokemon" HorizontalAlignment="Left" Margin="0,219,0,0" VerticalAlignment="Top" Width="67" Height="36" Click="pokemon_Click"/>
         <Canvas x:Name="visuel" HorizontalAlignment="Left" Height="478" Margin="89,7,0,0" VerticalAlignment="Top" Width="787" Grid.ColumnSpan="2" Background="#FF3974AB">
             <Label Content="Pokemon" FontSize="48" Foreground="White"/>
+            <TextBox Height="23" Canvas.Left="57" TextWrapping="Wrap" Text="TextBox" Canvas.Top="137" Width="138" Name="poke1"/>
+            <TextBox Height="23" Canvas.Left="320" TextWrapping="Wrap" Text="TextBox" Canvas.Top="137" Width="138" Name="poke2"/>
+            <TextBox Height="23" Canvas.Left="576" TextWrapping="Wrap" Text="TextBox" Canvas.Top="137" Width="138" Name="poke3"/>
+            <TextBox Height="23" Canvas.Left="57" TextWrapping="Wrap" Text="TextBox" Canvas.Top="307" Width="138" Name="poke4"/>
+            <TextBox Height="23" Canvas.Left="320" TextWrapping="Wrap" Text="TextBox" Canvas.Top="307" Width="138" Name="poke5"/>
+            <TextBox Height="23" Canvas.Left="576" TextWrapping="Wrap" Text="TextBox" Canvas.Top="307" Width="138" Name="poke6"/>
+            <Image Height="110" Canvas.Left="57" Canvas.Top="176" Width="123" Name="imgPoke1" Source="/tp2;component/PokemonImage/bulbasaur.jpg" />
+            <Image Height="110" Canvas.Left="320" Canvas.Top="176" Width="123" Name="imgPoke2" Source="/tp2;component/PokemonImage/ivysaur.png"/>
+            <Image Height="142" Canvas.Left="576" Canvas.Top="160" Width="123" Name="imgPoke3" Source="/tp2;component/PokemonImage/venusaur.jpg"/>
+            <Image Height="110" Canvas.Left="57" Canvas.Top="358" Width="123" Name="imgPoke4" Source="/tp2;component/PokemonImage/charmander.png"/>
+            <Image Height="110" Canvas.Left="320" Canvas.Top="358" Width="123" Name="imgPoke5" Source="/tp2;component/PokemonImage/charmeleon.png"/>
+            <Image Height="110" Canvas.Left="576" Canvas.Top="358" Width="123" Name="imgPoke6" Source="/tp2;component/PokemonImage/charizard.jpg">
+            </Image>
         </Canvas>
     </Grid>
 </Window>

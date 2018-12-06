@@ -20,19 +20,42 @@ namespace tp2
     public partial class RedditWindow : Window
     {
         Controleur controleurAccueil = null;
-
+        TextBox[] grilleVuesTextes = new TextBox[6];
 
         public RedditWindow()
         {
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
-        }
+            
+            grilleVuesTextes[0] = this.rssBlocVue;
+            grilleVuesTextes[1] = this.rssBlocVue2;
+            grilleVuesTextes[2] = this.rssBlocVue3;
+            grilleVuesTextes[3] = this.rssBlocVue4;
+            grilleVuesTextes[4] = this.rssBlocVue5;
+            grilleVuesTextes[5] = this.rssBlocVue6;
 
+        }
         public void activerControleur(Controleur controleur)
         {
             Console.WriteLine("RedditWindow.activerControleur()");
             this.controleurAccueil = controleur;
         }
+        public void afficherRssVue(List<RedditRss> listeRedditRss)
+        {
+            Console.WriteLine("RedditWindow.afficherRssVue");
+            int memePosition = 0;
+            foreach (RedditRss reddit in listeRedditRss)
+            {
+                Console.WriteLine("Reddit :" + reddit.title);
+                if (memePosition == 6) break;
+                this.grilleVuesTextes[memePosition].Text = reddit.title;
+
+                memePosition++;
+            }
+
+            
+        }
+    
 
         private void Accueil_Click(object sender, RoutedEventArgs e)
         {

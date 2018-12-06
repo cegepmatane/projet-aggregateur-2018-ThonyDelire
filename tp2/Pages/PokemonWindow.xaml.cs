@@ -19,10 +19,63 @@ namespace tp2
     /// </summary>
     public partial class PokemonWindow : Window
     {
+        Controleur controleurAccueil = null;
+        
+
         public PokemonWindow()
         {
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
+            
+        }
+
+        public void afficherPokemon(List<Pokemon> listePokemon)
+        {
+            Console.WriteLine("PokemonWindow.afficherPokemon");
+            int pokemonPosition = 0;
+
+            
+            foreach (Pokemon poke in listePokemon)
+            {
+                switch (pokemonPosition)
+                {
+                    case 0:
+                        this.poke1.Text = poke.nom;
+                        pokemonPosition++;
+                        break;
+                    case 1:
+                        this.poke2.Text = poke.nom;
+                        pokemonPosition++;
+                        break;
+                    case 2:
+                        this.poke3.Text = poke.nom;
+                        pokemonPosition++;
+                        break;
+                    case 3:
+                        this.poke4.Text = poke.nom;
+                        pokemonPosition++;
+                        break;
+                    case 4:
+                        this.poke5.Text = poke.nom;
+                        pokemonPosition++;
+                        break;
+                    case 5:
+                        this.poke6.Text = poke.nom;
+                        pokemonPosition++;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            
+        }
+
+        
+
+        public void activerControleur(Controleur controleur)
+        {
+            Console.WriteLine("PokemonWindow.activerControleur()");
+            this.controleurAccueil = controleur;
         }
 
 
@@ -35,37 +88,27 @@ namespace tp2
 
         private void Meteo_Click(object sender, RoutedEventArgs e)
         {
-            MeteoWindow meteoPage = new MeteoWindow();
-            meteoPage.Show();
-            this.Close();
+            controleurAccueil.notifierMeteo();
         }
 
         private void Rss_Click(object sender, RoutedEventArgs e)
         {
-            RedditWindow RedditPage = new RedditWindow();
-            RedditPage.Show();
-            this.Close();
+            controleurAccueil.notifierRss();
         }
 
         private void slack_Click(object sender, RoutedEventArgs e)
         {
-            SlackWindow slackPage = new SlackWindow();
-            slackPage.Show();
-            this.Close();
+            controleurAccueil.notifierSlack();
         }
 
         private void cryptomo_Click(object sender, RoutedEventArgs e)
         {
-            CryptoMonnaieWindow CryptoPage = new CryptoMonnaieWindow();
-            CryptoPage.Show();
-            this.Close();
+            controleurAccueil.notifierCryptoM();
         }
 
         private void pokemon_Click(object sender, RoutedEventArgs e)
         {
-            PokemonWindow PokemonPage = new PokemonWindow();
-            PokemonPage.Show();
-            this.Close();
+            controleurAccueil.notifierPokemon();
         }
     }
 }

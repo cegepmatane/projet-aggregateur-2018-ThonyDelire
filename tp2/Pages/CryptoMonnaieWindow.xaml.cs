@@ -19,12 +19,20 @@ namespace tp2
     /// </summary>
     public partial class CryptoMonnaieWindow : Window
     {
+        Controleur controleurAccueil = null;
+
         public CryptoMonnaieWindow()
         {
             MainWindow mainWindow = new MainWindow();
 
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
+        }
+
+        public void activerControleur(Controleur controleur)
+        {
+            Console.WriteLine("CryptoMonnaie.activerControleur()");
+            this.controleurAccueil = controleur;
         }
 
         private void Accueil_Click(object sender, RoutedEventArgs e)
@@ -36,43 +44,31 @@ namespace tp2
 
         private void Meteo_Click(object sender, RoutedEventArgs e)
         {
-            //MainWindow.AfficherMeteo();
-            MeteoWindow meteoPage = new MeteoWindow();
-            meteoPage.Show();
-            this.Close();
+            controleurAccueil.notifierMeteo();
         }
 
         private void Rss_Click(object sender, RoutedEventArgs e)
         {
-            
-            RedditWindow RedditPage = new RedditWindow();
-            RedditPage.Show();
-            this.Close();
+
+            controleurAccueil.notifierRss();
         }
 
         private void slack_Click(object sender, RoutedEventArgs e)
         {
-            
-            SlackWindow slackPage = new SlackWindow();
-            slackPage.Show();
-            this.Close();
+
+            controleurAccueil.notifierSlack();
         }
 
         private void cryptomo_Click(object sender, RoutedEventArgs e)
         {
-            
-            CryptoMonnaieWindow CryptoPage = new CryptoMonnaieWindow();
-            CryptoPage.Show();
-            this.Close();
-            //AfficherCryptomonaie();
+
+            controleurAccueil.notifierCryptoM();
         }
 
         private void pokemon_Click(object sender, RoutedEventArgs e)
         {
-            
-            PokemonWindow PokemonPage = new PokemonWindow();
-            PokemonPage.Show();
-            this.Close();
+
+            controleurAccueil.notifierPokemon();
         }
     }
 }

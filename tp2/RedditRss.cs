@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace tp2
 {
-    class RedditRss
+    public class RedditRss
     {
         //NECESSAIRE
         public string updated { get; set; }// publier le...

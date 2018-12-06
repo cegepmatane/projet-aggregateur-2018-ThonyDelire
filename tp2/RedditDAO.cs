@@ -23,33 +23,39 @@ namespace tp2
             XElement RedditXML = XElement.Parse(xml);
             foreach (XElement RedditRssXML in RedditXML.Elements())
             {
-               
-                XmlReader lecteurReddit = RedditRssXML.CreateReader();
-                lecteurReddit.MoveToContent();
-                lecteurReddit.ReadToDescendant("title");
-                string titre = lecteurReddit.ReadInnerXml();
-                Console.WriteLine(titre);
-
+             
                 
+                XmlReader lecteurReddit = RedditRssXML.CreateReader();
 
-                lecteurReddit.ReadToFollowing("content");
-                string publication = lecteurReddit.ReadInnerXml();
-                Console.WriteLine(publication);
+                string test = RedditRssXML.Name.LocalName;
+                //if (test.CompareTo("entry") != 0) continue;
+                if (test.CompareTo("entry") == 0)
+                {
+                    lecteurReddit.ReadToDescendant("title");
+                    string titre = lecteurReddit.ReadInnerXml();
+                    Console.WriteLine(titre);
 
 
 
-                lecteurReddit.ReadToFollowing("name");
-                string nom = lecteurReddit.ReadInnerXml();
-                Console.WriteLine(nom);
+                    lecteurReddit.ReadToFollowing("content");
+                    string publication = lecteurReddit.ReadInnerXml();
+                    Console.WriteLine(publication);
 
-                RedditRss redditRss = new RedditRss();
-                redditRss.title = titre;
-                //nouvelle.lien = lien;
-                redditRss.content = publication;
-                //nouvelle.categorie = categorie;
-                redditRss.name = nom;
 
-                listeRedditRss.Add(redditRss);
+
+                    lecteurReddit.ReadToFollowing("name");
+                    string nom = lecteurReddit.ReadInnerXml();
+                    Console.WriteLine(nom);
+
+                    RedditRss redditRss = new RedditRss();
+                    redditRss.title = titre;
+                    //nouvelle.lien = lien;
+                    redditRss.content = publication;
+                    //nouvelle.categorie = categorie;
+                    redditRss.name = nom;
+
+                    listeRedditRss.Add(redditRss);
+                }
             }
             //string titre = (string)lecteurNouvelle.ReadContentAs(typeof(string), null); // bug
 

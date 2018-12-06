@@ -146,6 +146,13 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="PokemonImage\bulbasaur.jpg" />
+    <Resource Include="PokemonImage\charizard.jpg" />
+    <Resource Include="PokemonImage\charmander.png" />
+    <Resource Include="PokemonImage\charmeleon.png" />
+    <Resource Include="PokemonImage\ivysaur.png" />
+    <Resource Include="PokemonImage\venusaur.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

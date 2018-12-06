@@ -20,6 +20,18 @@
         <Button x:Name="pokemon" Content="Pokemon" HorizontalAlignment="Left" Margin="0,219,0,0" VerticalAlignment="Top" Width="67" Height="36" Click="pokemon_Click"/>
         <Canvas x:Name="visuel" HorizontalAlignment="Left" Height="478" Margin="89,7,0,0" VerticalAlignment="Top" Width="787" Grid.ColumnSpan="2" Background="#FF3974AB">
             <Label Content="Rss Reddit" FontSize="48" Foreground="White"/>
+            <TextBox Height="46" Canvas.Left="37" TextWrapping="Wrap" Text="TextBox" Canvas.Top="105" Width="153" Name="rssBlocVue"/>
+            <TextBox Height="46" Canvas.Left="293" TextWrapping="Wrap" Text="TextBox" Canvas.Top="105" Width="153" x:Name="rssBlocVue2"/>
+            <TextBox Height="46" Canvas.Left="533" TextWrapping="Wrap" Text="TextBox" Canvas.Top="105" Width="153" x:Name="rssBlocVue3"/>
+            <TextBox Height="46" Canvas.Left="37" TextWrapping="Wrap" Text="TextBox" Canvas.Top="294" Width="153" x:Name="rssBlocVue4"/>
+            <TextBox Height="46" Canvas.Left="293" TextWrapping="Wrap" Text="TextBox" Canvas.Top="294" Width="153" x:Name="rssBlocVue5"/>
+            <TextBox Height="46" Canvas.Left="533" TextWrapping="Wrap" Text="TextBox" Canvas.Top="294" Width="153" x:Name="rssBlocVue6"/>
+            <Label Content="Meme 1" Canvas.Left="86" Canvas.Top="79" Foreground="White"/>
+            <Label Content="Meme 2" Canvas.Left="343" Canvas.Top="79" Foreground="White"/>
+            <Label Content="Meme 3" Canvas.Left="588" Canvas.Top="79" Foreground="White"/>
+            <Label Content="Meme 4" Canvas.Left="86" Canvas.Top="263" Foreground="White"/>
+            <Label Content="Meme 5" Canvas.Left="343" Canvas.Top="263" Foreground="White"/>
+            <Label Content="Meme 6" Canvas.Left="588" Canvas.Top="263" Foreground="White"/>
         </Canvas>
     </Grid>
 </Window>

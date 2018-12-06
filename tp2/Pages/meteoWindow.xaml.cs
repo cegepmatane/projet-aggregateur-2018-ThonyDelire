@@ -20,13 +20,28 @@ namespace tp2
     public partial class MeteoWindow : Window
     {
         Controleur controleurAccueil = null;
-      
+        NouvelleDAO nouvelleDAO = new NouvelleDAO();
+
+
 
         public MeteoWindow()
         {
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
+            
         }
+        public void afficherMeteoVue(List<Nouvelle> listeMeteo)
+        {
+            Console.WriteLine("MeteoWindow.affchicherMeteoVue()");
+            temperature.Text = "";
+            foreach (Nouvelle nouvelle in listeMeteo)
+            {
+                temperature.Text += nouvelle.titre + " ";
+                Console.WriteLine("Nouvelle:" + nouvelle.titre);
+            }
+        }
+        
+
         public void activerControleur(Controleur controleur)
         {
             Console.WriteLine("MeteoWindow.activerControleur()");
@@ -71,6 +86,9 @@ namespace tp2
             
         }
 
-        
+        private void temperature_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -10,56 +10,46 @@ namespace tp2
 {
 	class NouvelleDAO
 	{
-		//public List<Nouvelle> listerNouvelles(string rss)
+		
 		public List<Nouvelle> listerNouvelles(string rss)
 		{
 			List<Nouvelle> listeNouvelles = new List<Nouvelle>();
 			Console.WriteLine("RssDAO.listerNouvelles(" + rss + ")");
 			HttpWebRequest requeteNouvelles = (HttpWebRequest)WebRequest.Create(rss);
 			requeteNouvelles.Method = "GET";
-			//requeteNouvelles.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
 			requeteNouvelles.UserAgent = "Mozilla Firefox";
-			//ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 			WebResponse reponse = requeteNouvelles.GetResponse();
 			StreamReader lecteur = new StreamReader(reponse.GetResponseStream());
 			string xml = lecteur.ReadToEnd();
 			XElement nouvellesXML = XElement.Parse(xml);
-			foreach (XElement nouvelleXML in nouvellesXML.Elements())
-			{
-				//Console.WriteLine(nouvelleXML.ToString());
-				//XDocument nouvelleDoc = nouvelleXML.CreateReader();
-				XmlReader lecteurNouvelle = nouvelleXML.CreateReader();
-				lecteurNouvelle.MoveToContent();
-				lecteurNouvelle.ReadToDescendant("title");
-				string titre = lecteurNouvelle.ReadInnerXml();
-				Console.WriteLine(titre);
+            Console.WriteLine("XElement " + nouvellesXML);
+            foreach (XElement nouvelleXML in nouvellesXML.Elements())
+            {
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("Element XML : " + nouvelleXML.Name.LocalName);
+                XmlReader lecteurNouvelle = nouvelleXML.CreateReader();
+                string test = nouvelleXML.Name.LocalName;
+                
+                if (test.CompareTo("entry") == 0)
+                { 
 
-				//lecteurNouvelle.ReadToFollowing("link");
-				//string lien = lecteurNouvelle.MoveToAttribute("href").ToString();
-				//Console.WriteLine(lien);
+                    lecteurNouvelle.ReadToDescendant("title");
+                    string titre = lecteurNouvelle.ReadInnerXml();
+                    Console.WriteLine(titre);
 
-				lecteurNouvelle.ReadToFollowing("published");
-				string publication = lecteurNouvelle.ReadInnerXml();
-				Console.WriteLine(publication);
+                    lecteurNouvelle.ReadToFollowing("summary");
+                    string resume = lecteurNouvelle.ReadInnerXml();
+                    Console.WriteLine(resume);
 
-				//lecteurNouvelle.ReadToFollowing("category");
-				//string categorie = lecteurNouvelle.MoveToAttribute("term").ToString();
-				//Console.WriteLine(categorie);
+                    Nouvelle nouvelle = new Nouvelle();
+                    nouvelle.titre = titre;
+                    nouvelle.resume = resume;
 
-				lecteurNouvelle.ReadToFollowing("summary");
-				string resume = lecteurNouvelle.ReadInnerXml();
-				Console.WriteLine(resume);
-
-				Nouvelle nouvelle = new Nouvelle();
-				nouvelle.titre = titre;
-				//nouvelle.lien = lien;
-				nouvelle.publication = publication;
-				//nouvelle.categorie = categorie;
-				nouvelle.resume = resume;
-
-				listeNouvelles.Add(nouvelle);
-			}
-			//string titre = (string)lecteurNouvelle.ReadContentAs(typeof(string), null); // bug
+                    listeNouvelles.Add(nouvelle);
+                }
+            }
+			
 
 			return listeNouvelles;
 		}
