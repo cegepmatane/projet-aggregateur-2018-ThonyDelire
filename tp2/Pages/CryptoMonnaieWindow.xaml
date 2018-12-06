@@ -20,6 +20,12 @@
         <Button x:Name="pokemon" Content="Pokemon" HorizontalAlignment="Left" Margin="0,219,0,0" VerticalAlignment="Top" Width="67" Height="36" Click="pokemon_Click"/>
         <Canvas x:Name="visuel" HorizontalAlignment="Left" Height="478" Margin="89,7,0,0" VerticalAlignment="Top" Width="787" Grid.ColumnSpan="2" Background="#FF3974AB">
             <Label Content="CryptoMonnaie" FontSize="48" Foreground="White"/>
+            <TextBox Height="29" Canvas.Left="46" TextWrapping="Wrap" Text="TextBox" Canvas.Top="114" Width="191" Name="Monnaie1"/>
+            <TextBox Height="29" Canvas.Left="46" TextWrapping="Wrap" Text="TextBox" Canvas.Top="164" Width="191" Name="Monnaie2"/>
+            <TextBox Height="29" Canvas.Left="46" TextWrapping="Wrap" Text="TextBox" Canvas.Top="219" Width="191" Name="Monnaie3"/>
+            <TextBox Height="29" Canvas.Left="46" TextWrapping="Wrap" Text="TextBox" Canvas.Top="273" Width="191" Name="Monnaie4"/>
+            <TextBox Height="29" Canvas.Left="46" TextWrapping="Wrap" Text="TextBox" Canvas.Top="324" Width="191" Name="Monnaie5"/>
+            <TextBox Height="29" Canvas.Left="46" TextWrapping="Wrap" Text="TextBox" Canvas.Top="375" Width="191" Name="Monnaie6"/>
         </Canvas>
 
     </Grid>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace tp2
 {
-	class CryptoMonnaie
+	public class CryptoMonnaie
 	{
 		public string symbole { get; set; }
 		public string nom { get; set; }

@@ -35,6 +35,47 @@ namespace tp2
             this.controleurAccueil = controleur;
         }
 
+        public void afficherMonnaie(string listeMonnaies)
+        {
+            Console.WriteLine("PokemonWindow.afficherPokemon");
+            int monnaiePosition = 0;
+
+            
+
+           /*string.Equals(CryptoMonnaie crypto in listeMonnaies)
+            {
+                switch (monnaiePosition)
+                {
+                    case 0:
+                        this.Monnaie1.Text = crypto.nom;
+                        monnaiePosition++;
+                        break;
+                    case 1:
+                        this.Monnaie2.Text = crypto.nom;
+                        monnaiePosition++;
+                        break;
+                    case 2:
+                        this.Monnaie3.Text = crypto.nom;
+                        monnaiePosition++;
+                        break;
+                    case 3:
+                        this.Monnaie4.Text = crypto.nom;
+                        monnaiePosition++;
+                        break;
+                    case 4:
+                        this.Monnaie5.Text = crypto.nom;
+                        monnaiePosition++;
+                        break;
+                    case 5:
+                        this.Monnaie5.Text = crypto.nom;
+                        monnaiePosition++;
+                        break;
+                    default:
+                        break;
+                }
+            }*/
+        }
+
         private void Accueil_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainPage = new MainWindow();

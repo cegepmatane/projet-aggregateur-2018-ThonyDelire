@@ -14,6 +14,7 @@ namespace tp2
         public List<Nouvelle> listeNouvelles;
         public List<RedditRss> listeRedditRss;
         public List<Pokemon> listePokemon;
+        public string listeMonnaies;
         RedditDAO redditDao = new RedditDAO();
         NouvelleDAO nouvelleDAO = new NouvelleDAO();
         PokemonDAO pokemonDAO = new PokemonDAO();
@@ -118,15 +119,19 @@ namespace tp2
             pokemonPage.afficherPokemon(listePokemon);
         }
 
+        CryptoMonnaieWindow cryptoPage = null;
+
         public void notifierCryptoM()
         {
-            CryptoMonnaieWindow cryptoPage = new CryptoMonnaieWindow();
+            Console.WriteLine("Controleur.notifierCrytoM()");
+            cryptoPage = new CryptoMonnaieWindow();
             cryptoPage.activerControleur(this);
             cryptoPage.Show();
             if (null != this.dernierePage) this.dernierePage.Close();
             this.dernierePage = cryptoPage;
 
-            string listeMonnaies = cryptomonnaieDAO.listerMonnaies();
+            listeMonnaies = cryptomonnaieDAO.listerMonnaies();
+
             Console.WriteLine(listeMonnaies);
         }
     }

@@ -51,6 +51,7 @@ namespace tp2
         private void slack_Click(object sender, RoutedEventArgs e)
         {
             controleurAccueil.notifierSlack();
+            this.Close();
             
 
         }
@@ -58,23 +59,27 @@ namespace tp2
         private void Meteo_Click(object sender, RoutedEventArgs e)
         {
             controleurAccueil.notifierMeteo();
-            
+            this.Close();
+
         }
 
        private void Rss_Click(object sender, RoutedEventArgs e)
         {
             controleurAccueil.notifierRss();
-            
+            this.Close();
+
         }
 
         private void cryptomo_Click(object sender, RoutedEventArgs e)
         {
             controleurAccueil.notifierCryptoM();
+            this.Close();
         }
 
         private void pokemon_Click(object sender, RoutedEventArgs e)
         {
             controleurAccueil.notifierPokemon();
+            this.Close();
         }
     }
 
