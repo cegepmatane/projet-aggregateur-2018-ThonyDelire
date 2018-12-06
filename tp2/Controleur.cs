@@ -14,7 +14,7 @@ namespace tp2
         public List<Nouvelle> listeNouvelles;
         public List<RedditRss> listeRedditRss;
         public List<Pokemon> listePokemon;
-        public string listeMonnaies;
+        public List<CryptoMonnaie> listeMonnaies;
         RedditDAO redditDao = new RedditDAO();
         NouvelleDAO nouvelleDAO = new NouvelleDAO();
         PokemonDAO pokemonDAO = new PokemonDAO();
@@ -131,6 +131,7 @@ namespace tp2
             this.dernierePage = cryptoPage;
 
             listeMonnaies = cryptomonnaieDAO.listerMonnaies();
+            cryptoPage.afficherMonnaie(listeMonnaies);
 
             Console.WriteLine(listeMonnaies);
         }

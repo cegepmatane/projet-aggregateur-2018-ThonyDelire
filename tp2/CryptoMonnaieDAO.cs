@@ -9,7 +9,7 @@ namespace tp2
 	class CryptoMonnaieDAO
 	{
 
-		public string listerMonnaies()
+		public List<CryptoMonnaie> listerMonnaies()
         {
 			Console.WriteLine("CryptoMonnaieDAO.listerMonnaies()");
 			string url = "https://www.cryptocompare.com/api/data/coinlist/";
@@ -22,7 +22,9 @@ namespace tp2
 			JavaScriptSerializer parseur = new JavaScriptSerializer();
 			dynamic objet = parseur.Deserialize<dynamic>(json);
 			var lesMonnaies = objet["Data"];
-			foreach (dynamic itemMonnaie in lesMonnaies)
+            List<CryptoMonnaie> listeMonnaies = new List<CryptoMonnaie>();
+
+            foreach (dynamic itemMonnaie in lesMonnaies)
 			{
 				//Console.WriteLine(itemMonnaie.ToString());
 				// Donne : [AXIS, System.Collections.Generic.Dictionary`2[System.String, System.Object]]
@@ -37,13 +39,15 @@ namespace tp2
 
 				
 				CryptoMonnaie cryptomonnaie = new CryptoMonnaie();
-				cryptomonnaie.symbole = symbole;
+				//cryptomonnaie.symbole = symbole;
 				cryptomonnaie.nom = nom;
-				cryptomonnaie.algorithme = algorithme;
-				cryptomonnaie.nombre = nombre;
-			}
+				//cryptomonnaie.algorithme = algorithme;
+				//cryptomonnaie.nombre = nombre;
+                listeMonnaies.Add(cryptomonnaie);
+                
+            }
 
-			return json;
+            return listeMonnaies;
 		}
 
 	}

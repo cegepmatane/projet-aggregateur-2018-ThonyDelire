@@ -8,11 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bulbasaur.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("charizard.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("charmander.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("charmeleon.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ivysaur.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("venusaur.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("crypto-monnaie.png")]
 
 

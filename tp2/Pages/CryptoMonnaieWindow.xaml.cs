@@ -35,16 +35,18 @@ namespace tp2
             this.controleurAccueil = controleur;
         }
 
-        public void afficherMonnaie(string listeMonnaies)
+        public void afficherMonnaie(List<CryptoMonnaie> listeMonnaies)
         {
-            Console.WriteLine("PokemonWindow.afficherPokemon");
+            Console.WriteLine("CryptoWindow.afficherMonnaie");
             int monnaiePosition = 0;
 
             
 
-           /*string.Equals(CryptoMonnaie crypto in listeMonnaies)
+           foreach (CryptoMonnaie crypto in listeMonnaies)
             {
-                switch (monnaiePosition)
+
+                //this.Monnaie1.Text += crypto.nom + " ";
+                    switch (monnaiePosition)
                 {
                     case 0:
                         this.Monnaie1.Text = crypto.nom;
@@ -70,10 +72,15 @@ namespace tp2
                         this.Monnaie5.Text = crypto.nom;
                         monnaiePosition++;
                         break;
+                    case 6:
+                        this.Monnaie6.Text = crypto.nom;
+                        monnaiePosition++;
+                        break;
+
                     default:
                         break;
                 }
-            }*/
+            }
         }
 
         private void Accueil_Click(object sender, RoutedEventArgs e)

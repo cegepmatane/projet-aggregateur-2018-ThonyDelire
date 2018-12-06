@@ -154,5 +154,8 @@
     <Resource Include="PokemonImage\ivysaur.png" />
     <Resource Include="PokemonImage\venusaur.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="crypto-monnaie.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
