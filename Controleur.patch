@@ -1,0 +1,4 @@
+97c97
+<             string redditRss = "https://www.reddit.com/r/dankmemes/.rss";
+---
+>             string redditRss = "https://www.reddit.com/r/Quebec/.rss";
